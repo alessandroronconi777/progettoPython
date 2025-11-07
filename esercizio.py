@@ -1,11 +1,14 @@
-#commenti
-#addizione di due numeri interi
-addendo_uno, addendo_due = 5, 10
+print("inserisci 3 numeri interi: ")
+numero1 = input("Inserisci il primo numero: ")
+numero2 = input("Inserisci il secondo numero: ")
+numero3 = input("Inserisci il terzo numero: ")
+massimo = 0
 
-def somma_due_numeri(num1, num2):
-    return num1 + num2
+if int(numero1) >= int(numero2) and int(numero1) >= int(numero3):
+    massimo = numero1
+elif int(numero2) >= int(numero1) and int(numero2) >= int(numero3):
+    massimo = numero2
+else:
+    massimo = numero3
 
-somma = somma_due_numeri(addendo_uno, addendo_due)
-
-print("La somma di", addendo_uno, "e", addendo_due, "è:", somma)
-
+print("il numero massimo è: " + str(massimo))
